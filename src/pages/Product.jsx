@@ -1,11 +1,14 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 
-const Product = () => {
+const MealRecipe = () => {
+  const { mealName } = useParams()
+  console.log(mealName);
   return (
     <div>
-      product page
+     hhh
     </div>
   )
 }
 
-export default Product
+export default MealRecipe

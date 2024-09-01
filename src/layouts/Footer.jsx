@@ -6,7 +6,7 @@ import { SlSocialFacebook, SlSocialInstagram, SlSocialTwitter, SlSocialYoutube }
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-[#d8d8d830]  px-20 py-10 flex flex-col items-center">
+    <div className="bg-[#d8d8d830] px-20 py-10 flex flex-col items-center mt-5 "> 
       <div className="w-[90%] border-b-[2px] pb-10 flex justify-between items-center">
       <div className="  w-[30%] h-[90%] flex flex-col gap-y-3">
         <img
