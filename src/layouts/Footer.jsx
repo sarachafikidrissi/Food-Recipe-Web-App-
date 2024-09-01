@@ -7,8 +7,8 @@ const Footer = () => {
   const navigate = useNavigate();
   return (
     <div className="bg-[#d8d8d830] px-20 py-10 flex flex-col items-center mt-5 "> 
-      <div className="w-[90%] border-b-[2px] pb-10 flex justify-between items-center">
-      <div className="  w-[30%] h-[90%] flex flex-col gap-y-3">
+      <div className="sm:w-[90%] w-full border-b-[2px] pb-10 flex sm:flex-row flex-col justify-between items-center gap-y-4">
+      <div className="  sm:w-[30%] h-[90%] flex flex-col gap-y-3">
         <img
           onClick={() => {
             navigate("./");
@@ -23,7 +23,7 @@ const Footer = () => {
           the moment
         </p>
       </div>
-      <div className=" w-[60%] h-[90%] flex  gap-x-[10vw]">
+      <div className=" sm:w-[60%] h-[90%] flex  gap-x-[10vw]">
         <div className="flex flex-col gap-y-3">
         <h1 className="font-medium">Tastebite</h1>
         <div className="flex flex-col gap-y-3 ">

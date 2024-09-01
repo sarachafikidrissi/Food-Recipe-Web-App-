@@ -2,12 +2,15 @@
 import { assets } from "../assets";
 import { GoArrowRight } from "react-icons/go";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import { MyContext } from "../context/contextProvider";
 
 const Home = () => {
   // const categories = useContext(MyContext);
   // const a = categories.latestRecipes
   // console.log(a);
+
+  const navigate = useNavigate()
 
   const [latestRecipes, setLatestRecipes] = useState();
 
@@ -25,7 +28,7 @@ const Home = () => {
   return (
     <>
     {/* hero section */}
-      <div className=" w-[80vw] mx-auto mt-5 h-[60vh] sm:flex ">
+      <div className=" w-[80vw] mx-auto mt-5 sm:h-[60vh] sm:flex ">
         <div className="sm:w-[60%] w-[100%] h-full">
           <img
             src={assets.heroImg}
@@ -48,8 +51,8 @@ const Home = () => {
 
     {/* Newsletter */}
       <div className="bg-[#ffd8ca]  mt-5 flex flex-col items-center py-10 gap-y-4">
-        <h1 className="font-semibold text-8xl w-[40%] text-center">Deliciousness to your inbox</h1>
-        <p className="text-3xl w-[30%] text-center">Enjoy weekly hand picked recipes
+        <h1 className="font-semibold sm:text-8xl sm:w-[40%] text-center">Deliciousness to your inbox</h1>
+        <p className="text-3xl sm:w-[30%] text-center">Enjoy weekly hand picked recipes
         and recommendations</p>
         <div className="relative w-[40%]">
         <input type="text w-full" className="w-full p-6 rounded-sm focus:outline-none" />
@@ -65,9 +68,10 @@ const Home = () => {
         <div className="flex flex-wrap  gap-y-5 gap-x-3">
           <div className="w-[24%] h-[50%] flex flex-col items-center gap-y-3 cursor-pointer">
             <img
+            onClick={() => {navigate('./recipes')}}
               src={assets.heroImg}
               alt=""
-              className="w-full h-full object-cover rounded-md hover:scale-125 ease-in-out duration-300"
+              className="w-full h-full object-cover rounded-md hover:scale-105 ease-in-out duration-300"
             />
             <h1 className="font-bold text-xl w-[80%]  text-center ">
               Description
@@ -84,6 +88,7 @@ const Home = () => {
         
           <div key={i} className="w-[24%] h-[50%] flex flex-col items-center gap-y-3 cursor-pointer">
             <img
+            onClick={() => {navigate("./recipes")}}
               src={e.strCategoryThumb}
               alt=""
               className="w-full h-full object-cover rounded-md hover:scale-125 ease-in-out duration-300"
@@ -98,7 +103,7 @@ const Home = () => {
                 }
         </div> */}
         <div className="flex justify-center">
-        <button className="border-2 border-black py-3 px-10 rounded-md font-medium text-xl hover:bg-black hover:text-white">Load More</button>
+        <button  onClick={() => {navigate('./recipes')}} className="border-2 border-black py-3 px-10 rounded-md font-medium text-xl hover:bg-black hover:text-white">Load More</button>
         </div>
       </div>
 
