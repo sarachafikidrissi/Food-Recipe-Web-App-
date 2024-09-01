@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="bg-[#d8d8d830] px-20 py-10 flex flex-col items-center mt-5 "> 
       <div className="sm:w-[90%] w-full border-b-[2px] pb-10 flex sm:flex-row flex-col justify-between items-center gap-y-4">
-      <div className="  sm:w-[30%] h-[90%] flex flex-col gap-y-3">
+      <div className="  sm:w-[30%] h-[90%] flex flex-col gap-y-3 items-center">
         <img
           onClick={() => {
             navigate("./");
@@ -17,7 +17,7 @@ const Footer = () => {
           alt="logo"
           className="w-[150px]  "
         />
-        <p className="text-gray-400">
+        <p className="text-gray-400 text-center">
           "On the other hand, we denounce with righteous indignation and dislike
           men who are so beguiled and demoralized by the charms of pleasure of
           the moment
@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
       </div>
 
-      <div className="mt-5 flex justify-between w-[90%]">
+      <div className="mt-5 flex sm:flex-row flex-col-reverse gap-y-2 justify-between w-[90%]">
         <span className="text-[12px] text-gray-400">© 2020 Tastebite - All rights reserved</span>
 
         <div className="flex gap-x-5">

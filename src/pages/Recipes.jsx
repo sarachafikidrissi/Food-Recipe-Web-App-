@@ -43,23 +43,23 @@ const Recipes = () => {
         <div className="w-[90%]  ">
           <h1 className="font-medium text-3xl ">Recipes</h1>
           <div className="relative w-[100%] mt-4">
-            <IoKeyOutline className="text-5xl absolute left-1 top-[50%] translate-y-[-50%]" />
+            <IoKeyOutline className="sm:text-5xl text-3xl absolute left-1 top-[50%] translate-y-[-50%]" />
             <input
               onChange={(e) => {
                 setSearchText(e.target.value);
               }}
               type="text w-full"
-              className="w-full p-6 rounded-md focus:outline-none shadow-2xl ps-20"
+              className="w-full p-6 rounded-md focus:outline-none shadow-2xl sm:ps-20 ps-10"
               placeholder="Keywords ..."
             />
             <button
-              className="bg-orange-600 text-white h-[90%] w-[20%] px-10 py-5 rounded-e-md absolute right-1 top-[50%] translate-y-[-50%]"
+              className="bg-orange-600 text-white h-[90%] sm:w-[20%] w-[30%] sm:px-10 sm:py-5 rounded-e-md absolute right-1 top-[50%] translate-y-[-50%]"
             >
               Search By Ingredient
             </button>
           </div>
 
-          <div className="flex flex-wrap  gap-y-5 gap-x-3 mt-10">
+          <div className="flex sm:justify-normal justify-center flex-wrap  gap-y-5 gap-x-3 mt-10">
 
             {recipe && recipe.map((e, i) => {
               return (

@@ -10,7 +10,7 @@ const navigate = useNavigate()
 
 const [menu, setMenu] = useState(false)
   return (
-    <div className='flex sm:flex-col gap-y-10 items-center justify-between relative'>
+    <div className='flex sm:flex-col gap-y-10 items-center justify-between relative z-[999]'>
     <div className=' p-2 flex sm:justify-center justify-between w-full'> {/*flex items-center justify-between w-full*/ }
       <img onClick={() => { navigate("./")}} src={assets.logo} alt="logo" className='sm:w-[300px] w-[100px] ' />
       <CiMenuBurger onClick={() => {setMenu(!menu)}} className='sm:hidden text-2xl'/>
