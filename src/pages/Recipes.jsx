@@ -12,10 +12,10 @@ const Recipes = () => {
   let ingName = searchText;
 
 
-  let response = undefined
-
+  
   useEffect(() => {
-    // if (ingName) {
+    
+    let response = undefined
       const fetchRecipes = async () => {
         if(ingName){
           response = await fetch(
@@ -27,15 +27,13 @@ const Recipes = () => {
           );
         }
         let data = await response.json();
-        console.log(data);
         setRecipe(data.meals);
       };
       fetchRecipes();
-    // }
+
   }, [ingName]);
 
-  console.log(ingName);
-  console.log(recipe);
+
 
   return (
     <>
@@ -60,10 +58,12 @@ const Recipes = () => {
           </div>
 
           <div className="flex flex-wrap  gap-y-5 gap-x-3 mt-10">
-            {recipe.map((e, i) => {
+
+            {recipe && recipe.map((e, i) => {
               return (
                 <>
                   <div key={i} className="w-[24%] h-[50%] flex flex-col items-center gap-y-3 cursor-pointer">
+                    
                     <img
                     onClick={() => {navigate(`/recipes/${e.strMeal}`)}}
                       src={e.strMealThumb}
@@ -76,7 +76,8 @@ const Recipes = () => {
                   </div>
                 </>
               );
-            })}
+            })
+          } 
           </div>
         </div>
       </div>

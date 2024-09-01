@@ -11,7 +11,7 @@ import Cart from "./pages/Cart";
 import Navbar from "./layouts/Navbar";
 import Footer from "./layouts/Footer";
 import { MyProvide } from "./context/contextProvider";
-import MealRecipe from "./pages/Product";
+import MealRecipe from "./pages/MealRecipe";
 
 const App = () => {
   return (
