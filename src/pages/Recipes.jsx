@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoKeyOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { MyContext } from "../context/contextProvider";
 
 const Recipes = () => {
   const navigate = useNavigate()
-  const [recipe, setRecipe] = useState([]);
+  // const [recipe, setRecipe] = useState([]);
+  const {recipe, setRecipe} = useContext(MyContext);
 
   const [searchText, setSearchText] = useState(null);
 
@@ -31,7 +33,7 @@ const Recipes = () => {
       };
       fetchRecipes();
 
-  }, [ingName]);
+  }, [ingName, setRecipe]);
 
 
 
