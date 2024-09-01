@@ -74,8 +74,8 @@ let steps = instructions.split(".").filter(e => e)
           <img src={meal.strMealThumb} alt="" className="w-full h-full rounded-2xl" />
         </div>
         {/* Ingredients / Instructions */}
-        <div className="flex justify-between">
-          <div className="w-[40%] pt-4 flex flex-col gap-y-5">
+        <div className="flex sm:flex-row flex-col justify-between">
+          <div className="sm:w-[40%] pt-4 flex flex-col gap-y-5  ">
               {/* Ingredients */}
 
               <h1 className=" text-3xl font-bold font-mono">Ingredients</h1>
@@ -84,7 +84,7 @@ let steps = instructions.split(".").filter(e => e)
                 ingredients.map((e, i) => {
                   return(
                     
-                    <span className="text-2xl flex items-center gap-x-3"> <FaRegCircle /> {mesures[i]} {e}</span>
+                    <span className="text-2xl flex items-center gap-x-3"> <FaRegCircle className="flex-shrink-0 flex-grow-0" /> {mesures[i]} {e}</span>
                   )
                 })
               }
@@ -92,7 +92,7 @@ let steps = instructions.split(".").filter(e => e)
               </div>
           </div>
 
-          <div className="w-[55%]   h-full  pt-4 flex flex-col gap-y-5">
+          <div className="sm:w-[55%]   h-full  pt-4 flex flex-col gap-y-5">
             {/* Instructuctions */}
             <h1 className=" text-3xl font-bold font-mono">Instructions</h1>
 

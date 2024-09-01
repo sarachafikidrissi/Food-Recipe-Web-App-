@@ -54,11 +54,11 @@ const Home = () => {
         <h1 className="font-semibold sm:text-8xl sm:w-[40%] text-center">Deliciousness to your inbox</h1>
         <p className="text-3xl sm:w-[30%] text-center">Enjoy weekly hand picked recipes
         and recommendations</p>
-        <div className="relative w-[40%]">
-        <input type="text w-full" className="w-full p-6 rounded-sm focus:outline-none" />
+        <div className="relative sm:w-[40%]  w-[90%]">
+        <input type="text" className="w-full p-6 rounded-sm focus:outline-none" />
         <button className="bg-orange-600 text-white h-[90%] px-10 py-5 rounded-e-md absolute right-1 top-[50%] translate-y-[-50%] animate-pulse hover:animate-none">Join</button>
         </div>
-        <span className="font-extralight">By joining our newsletter you agree to our  <span className="font-extralight hover:text-orange-600  cursor-pointer  border-b-[1px] border-orange-600">Terms and Conditions</span></span>
+        <span className="font-extralight text-center">By joining our newsletter you agree to our  <span className="font-extralight hover:text-orange-600  cursor-pointer  border-b-[1px] border-orange-600">Terms and Conditions</span></span>
       </div>
 
 
