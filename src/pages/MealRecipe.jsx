@@ -26,11 +26,6 @@ let steps = instructions.split(".").filter(e => e)
 
 
 
-
-
-
-
-
  ingStartWith.forEach(e => {
   if(meal[e] !== " " && meal[e] !== "" &&  meal[e] !== null ){
     ingredients.push(meal[e])
@@ -65,7 +60,7 @@ let steps = instructions.split(".").filter(e => e)
         </p>
 
         <div className="w-full h-[20%]">
-          <img src={meal.strMealThumb} alt="" className="w-full h-full rounded-2xl" />
+          <img src={meal.strMealThumb} alt="" className="w-full h-full rounded-2xl object-conver" />
         </div>
         {/* Ingredients / Instructions */}
         <div className="flex sm:flex-row flex-col justify-between">

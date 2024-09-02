@@ -12,6 +12,7 @@ import Navbar from "./layouts/Navbar";
 import Footer from "./layouts/Footer";
 import { MyProvide } from "./context/contextProvider";
 import MealRecipe from "./pages/MealRecipe";
+import CategoryMeals from "./pages/CategoryMeals";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
 
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/recipes/:mealName"  element={<MealRecipe />} />
-
+        <Route path="/:category"  element={<CategoryMeals />} />
 
       </Routes>
       </MyProvide>

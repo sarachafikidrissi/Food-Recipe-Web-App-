@@ -9,6 +9,7 @@ const Recipes = () => {
   // const [recipe, setRecipe] = useState([]);
   const {recipe, setRecipe} = useContext(MyContext);
 
+
   const [searchText, setSearchText] = useState(null);
 
   let ingName = searchText;
@@ -40,7 +41,7 @@ const Recipes = () => {
   return (
     <>
       <div className="flex justify-center ">
-        <div className="w-[90%]  ">
+        <div className="w-[90%] ">
           <h1 className="font-medium text-3xl ">Recipes</h1>
           <div className="relative w-[100%] mt-4 sm:border-none border-[2px]">
             <IoKeyOutline className="sm:text-5xl  text-3xl absolute left-1 top-[50%] translate-y-[-50%]" />
