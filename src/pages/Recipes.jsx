@@ -42,14 +42,14 @@ const Recipes = () => {
       <div className="flex justify-center ">
         <div className="w-[90%]  ">
           <h1 className="font-medium text-3xl ">Recipes</h1>
-          <div className="relative w-[100%] mt-4">
+          <div className="relative w-[100%] mt-4 sm:border-none border-[2px]">
             <IoKeyOutline className="sm:text-5xl  text-3xl absolute left-1 top-[50%] translate-y-[-50%]" />
             <input
               onChange={(e) => {
                 setSearchText(e.target.value);
               }}
               type="text"
-              className="w-full   p-6 rounded-md focus:outline-none shadow-2xl sm:ps-20 ps-10"
+              className="w-full   p-6 rounded-md focus:outline-none sm:shadow-2xl  sm:ps-20 ps-10"
               placeholder="Keywords ..."
             />
             <button

@@ -25,6 +25,8 @@ const Home = () => {
     fetchLatestRecipes();
   }, []);
 
+  console.log(latestRecipes);
+
   return (
     <>
     {/* hero section */}
